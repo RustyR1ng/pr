@@ -1,0 +1,18 @@
+.template {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.template__item:nth-of-type(even) {
+  background-color: #800000;
+}
+
+.template__item:nth-of-type(odd) {
+  background-color: #787878;
+}
