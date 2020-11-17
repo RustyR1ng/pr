@@ -1,14 +1,30 @@
-.template {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+body {
   height: 100vh;
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
 }
+.template {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 100%;
+  margin-bottom: 50px;
+}
 
-.template__item {
+.template_1quest .template__item {
   border: 5px solid #a595ff;
+}
+
+.template_3quest .template__item:first-of-type {
+  background-color: #800000;
+}
+
+.template_3quest .template__item:last-of-type {
+  background-color: #787878;
+}
+
+.template_3quest .template__item:nth-of-type(2n) {
+  box-shadow: 0 0 0 5px #ff3d3d;
 }
