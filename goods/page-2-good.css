@@ -1,0 +1,79 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.card {
+  position: relative;
+  min-width: 170px;
+  max-width: 20%;
+}
+
+.card__content {
+  display: grid;
+  gap: 10px;
+  box-sizing: border-box;
+  grid-template-rows: 1fr 50px 50px;
+  place-items: center center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  position: relative;
+  z-index: 0;
+  transition: 0.5s;
+}
+
+.card__overlay {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card__overlay > .card__content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  grid-template-rows: 0.5fr 1fr 50px;
+  min-height: 100%;
+  z-index: 1;
+}
+
+.card__img {
+  width: 100%;
+  background-size: cover;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.card__text {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.card__button {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  outline: none;
+}
+
+.card__button:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.card:hover > .card__content {
+  opacity: 0;
+}
+.card:hover .card__overlay {
+  opacity: 1;
+}
